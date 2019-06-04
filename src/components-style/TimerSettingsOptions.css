@@ -1,0 +1,27 @@
+.TimerSettingsOptions {
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 12rem;
+    border: 0.1rem solid #F0F0F0;
+}
+.timer-settings-label {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+.settings-buttons-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 10rem;
+}
+.increment-decrement-buttons {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: 0;
+    padding: 0.1rem;
+    font-size: 2rem;
+}

@@ -1,0 +1,13 @@
+.Timer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border: 0.1rem solid #E0F0A0;
+}
+.timer-label {
+    font-size: 1.8rem;
+}
+.time-left {
+    font-size: 4.5rem;
+}
