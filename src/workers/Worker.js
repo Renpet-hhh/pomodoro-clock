@@ -29,13 +29,13 @@ export default () => {
         const decrementTime = () => {
             if (timer.currentTime === null) return;
             timer.currentTime -= 100;
-            if (timer.currentTime % 1000 === 900) {
-                if (timer.currentTime === 900) {
+            if (timer.currentTime % 1000 === 0) {
+                if (timer.currentTime === 0) {
                     timer.currentTime = null; // avoids duplicate onFinish evocation
-                    setTimeout(() => postMessage("FINISH"), 900);
+                    postMessage("FINISH");
                     return;
                 }
-                postMessage(Math.floor(timer.currentTime/1000));
+                postMessage(timer.currentTime/1000);
             }
         }
         timer.fn = decrementTime;

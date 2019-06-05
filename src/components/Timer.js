@@ -32,6 +32,7 @@ export default class Timer extends Component {
     }
 
 
+
     convertTimeInSecondsToString = (timeInSeconds) => {
         let minutes = Math.floor(timeInSeconds/60);
         let seconds = timeInSeconds % 60;
