@@ -58,14 +58,16 @@ export default class PomodoroClock extends Component {
     handleTimeFinish = () => {
         if (this.state.mode === "Session") {
             this.audio.play();
-            this.state.resetTimer(this.state.breakTime*60); // seconds
-            this.state.resumeTimer();
-            this.setState({mode: "Break"});
+            this.setState({mode: "Break"}, () => {
+                this.state.resetTimer(this.state.breakTime*60); // seconds
+                this.state.resumeTimer();
+            });
         } else {
             this.audio.play();
-            this.state.resetTimer(this.state.sessionTime*60); // seconds
-            this.state.resumeTimer();
-            this.setState({mode: "Session"});
+            this.setState({mode: "Session"}, () => {
+                this.state.resetTimer(this.state.sessionTime*60); // seconds
+                this.state.resumeTimer();
+            });
         }
     }
 

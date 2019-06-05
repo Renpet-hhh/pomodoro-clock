@@ -16,14 +16,20 @@ export default class Timer extends Component {
         this.timer.postMessage([100, this.props.defaultTime*1000]);
         this.timer.onmessage = e => {
             if (e.data === "FINISH") {
-                this.setState({currentTimeInSeconds: 0});
-                this.props.onFinish(); // calls parent's onFinish handler
+                this.setState({currentTimeInSeconds: 0}, () => {
+                    this.props.onFinish(); // calls parent's onFinish handler
+                });
+                
             } else if (Number.isFinite(e.data)) {
                 this.setState({currentTimeInSeconds: e.data}); // worker is sending the updated currentTimeInSeconds
             } else {
                 console.log(e.data); // catch missing messages, for now
             }
         };
+    }
+
+    componentDidUpdate() {
+        console.log(document.getElementById("time-left").innerText);
     }
 
     convertTimeInSecondsToString = (timeInSeconds) => {
