@@ -16,9 +16,12 @@ export default class Timer extends Component {
         this.timer.postMessage([100, this.props.defaultTime*1000]);
         this.timer.onmessage = e => {
             if (e.data === "FINISH") {
-                this.setState({currentTimeInSeconds: 0}, () => {
+                this.setState({currentTimeInSeconds: 0}, () => setTimeout(() => {
                     this.props.onFinish(); // calls parent's onFinish handler
-                });
+                }), 30);
+                // this weird setTimeout is needed because, somehow, the state change 
+                // wasn't being seem by the tests (onFinish changes states too, 
+                // so maybe the currenTimeInSeconds: 0 wasn't lasting enough time??)
                 
             } else if (Number.isFinite(e.data)) {
                 this.setState({currentTimeInSeconds: e.data}); // worker is sending the updated currentTimeInSeconds

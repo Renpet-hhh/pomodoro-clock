@@ -32,7 +32,6 @@ export default () => {
             if (timer.currentTime % 1000 === 900) {
                 if (timer.currentTime === 900) {
                     timer.currentTime = null; // avoids duplicate onFinish evocation
-                    postMessage(0);
                     setTimeout(() => postMessage("FINISH"), 900);
                     return;
                 }
