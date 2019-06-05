@@ -21,7 +21,7 @@ export default class Timer extends Component {
                 }), 30);
                 // this weird setTimeout is needed because, somehow, the state change 
                 // wasn't being seem by the tests (onFinish changes states too, 
-                // so maybe the currenTimeInSeconds: 0 wasn't lasting enough time??)
+                // so maybe the currentTimeInSeconds: 0 wasn't lasting enough time??)
                 
             } else if (Number.isFinite(e.data)) {
                 this.setState({currentTimeInSeconds: e.data}); // worker is sending the updated currentTimeInSeconds
@@ -31,9 +31,6 @@ export default class Timer extends Component {
         };
     }
 
-    componentDidUpdate() {
-        console.log(document.getElementById("time-left").innerText);
-    }
 
     convertTimeInSecondsToString = (timeInSeconds) => {
         let minutes = Math.floor(timeInSeconds/60);
