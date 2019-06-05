@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/pomodoro-clock/static/css/main.6fe10a55.chunk.css",
-    "main.js": "/pomodoro-clock/static/js/main.50606dc5.chunk.js",
-    "main.js.map": "/pomodoro-clock/static/js/main.50606dc5.chunk.js.map",
+    "main.js": "/pomodoro-clock/static/js/main.ab26702c.chunk.js",
+    "main.js.map": "/pomodoro-clock/static/js/main.ab26702c.chunk.js.map",
     "runtime~main.js": "/pomodoro-clock/static/js/runtime~main.647dc629.js",
     "runtime~main.js.map": "/pomodoro-clock/static/js/runtime~main.647dc629.js.map",
     "static/css/2.6e6e1b01.chunk.css": "/pomodoro-clock/static/css/2.6e6e1b01.chunk.css",
     "static/js/2.61b6dae8.chunk.js": "/pomodoro-clock/static/js/2.61b6dae8.chunk.js",
     "static/js/2.61b6dae8.chunk.js.map": "/pomodoro-clock/static/js/2.61b6dae8.chunk.js.map",
     "index.html": "/pomodoro-clock/index.html",
-    "precache-manifest.b0f231092473bf73dcec80f2aa906f61.js": "/pomodoro-clock/precache-manifest.b0f231092473bf73dcec80f2aa906f61.js",
+    "precache-manifest.56db7f8229ee204e1e5c161c3e812690.js": "/pomodoro-clock/precache-manifest.56db7f8229ee204e1e5c161c3e812690.js",
     "service-worker.js": "/pomodoro-clock/service-worker.js",
     "static/css/2.6e6e1b01.chunk.css.map": "/pomodoro-clock/static/css/2.6e6e1b01.chunk.css.map",
     "static/css/main.6fe10a55.chunk.css.map": "/pomodoro-clock/static/css/main.6fe10a55.chunk.css.map",
